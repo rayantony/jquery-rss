@@ -10,11 +10,12 @@
 
     this.options = $.extend({
       ssl: false,
-      host: 'www.feedrapp.info',
+      host: 'feedsme.heroku.com',
+      hostalt: 'www.feedrapp.info',
       limit: null,
       key: null,
       layoutTemplate: '<ul>{entries}</ul>',
-      entryTemplate: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>',
+      entryTemplate: '<li>{author}<br/>{date}<br/><a href="{url}">{title}</a><br/>{shortBodyPlain}</li>',
       tokens: {},
       outputMode: 'json',
       dateFormat: 'dddd MMM Do',
