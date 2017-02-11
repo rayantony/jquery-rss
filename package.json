@@ -3,7 +3,7 @@
   "name": "jquery-rss",
   "description": "An easy-to-use rss plugin for jquery with templating.",
   "version": "3.3.0",
-  "homepage": "https://github.com/sdepold/jquery-rss",
+  "homepage": "https://github.com/rayantony/jquery-rss",
   "keywords": [
     "rss",
     "jquery",
@@ -12,7 +12,7 @@
   "ender": "noop",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sdepold/jquery-rss.git"
+    "url": "git://github.com/rayantony/jquery-rss.git"
   },
   "contributors": [
     {
