@@ -10,7 +10,7 @@
 
     this.options = $.extend({
       ssl: false,
-      host: 'feedsme.heroku.com',
+      host: 'feedsme.herokuapp.com',
       hostalt: 'www.feedrapp.info',
       limit: null,
       key: null,
