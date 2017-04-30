@@ -9,18 +9,18 @@
     this.effectQueue  = [];
 
     this.options = $.extend({
-      ssl: false,
+      ssl: true,
       host: 'feedsme.herokuapp.com',
       hostalt: 'www.feedrapp.info',
-      limit: null,
+      limit: 10, /* limit: null, */ 
       key: null,
       layoutTemplate: '<ul>{entries}</ul>',
-      entryTemplate: '<li>{author}<br/>{date}<br/><a href="{url}">{title}</a><br/>{shortBodyPlain}</li>',
+      entryTemplate: '<li><a href="{url}">{title}</a><br>{author}<br/>{date}<br/><a href="{url}">{url}</a><br/>{shortBodyPlain}</li>',
       tokens: {},
       outputMode: 'json',
       dateFormat: 'dddd MMM Do',
       dateLocale: 'en',
-      effect: 'show',
+      effect: 'slideFastSynced',
       offsetStart: false,
       offsetEnd: false,
       error: function () {
