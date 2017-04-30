@@ -12,7 +12,7 @@ describe('jquery.rss', function () {
 
     this.element = $('<div>').appendTo($('body'));
     this.timeout = 10000;
-    this.feedUrl = 'http://xml-rss.de/xml/site-atom.xml';
+    this.feedUrl = 'http://github.com/deadflowers.atom';
     this.fakeGetJSON = function (content) {
       self.originalGetJSON = $.getJSON;
 
@@ -184,7 +184,7 @@ describe('jquery.rss', function () {
   describe('ssl', function () {
     it('rewrites the host to herokuapp.com if not specified differently', function (done) {
       this.ajaxStub = this.stub($, 'getJSON', function (apiUrl) {
-        expect(apiUrl).toMatch(/https:\/\/www\.feedrapp\.info/);
+        expect(apiUrl).toMatch(/https:\/\/feedsme\.herokuapp\.com/);
         done();
       });
 
@@ -193,7 +193,7 @@ describe('jquery.rss', function () {
 
     it('uses feedrapp.info if ssl is turned off', function (done) {
       this.ajaxStub = this.stub($, 'getJSON', function (apiUrl) {
-        expect(apiUrl).toMatch(/http:\/\/www\.feedrapp\.info/);
+        expect(apiUrl).toMatch(/http:\/\/feeedsme\.herokuapp\.com/);
         done();
       });
 
@@ -228,7 +228,7 @@ describe('jquery.rss', function () {
         }, function () {
           var renderedContent = $container.html().replace(/\n/g, '');
 
-          expect(renderedContent).toEqual('<ul><li>XML-RSS.de Website-Feed</li></ul>');
+          expect(renderedContent).toEqual('<ul><li>DeadFlowers Github Basic Activity Feed</li></ul>');
           done();
         });
       });
