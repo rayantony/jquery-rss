@@ -20,7 +20,7 @@
       outputMode: 'json',
       dateFormat: 'dddd MMM Do',
       dateLocale: 'en',
-      effect: 'slideFastSynced',
+      effect:slideFast, /* 'slideFastSynced', */ 
       offsetStart: false,
       offsetEnd: false,
       error: function () {
